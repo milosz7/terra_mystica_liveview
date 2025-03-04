@@ -5,15 +5,19 @@
 The project uses `PostgreSQL` database engine. In order to connect with the
 database the user has to do the following:
 
-- Create the `/envs/` folder in the project root
-- Create the `.dev.env` file containing the following environmental variables:
+- Edit the `config/dev.exs` database config, below is an example configuration
 
 ```
-DB_USERNAME - postgres database user username
-DB_PASSWORD - postgres database user's password
-DB_HOSTNAME - postgres database hostname (default: localhost)
-DB_DATABASE_NAME - postgres database name - has to be created (TODO: add description after adding schema)
+# Database dev config
+config :terra_mystica, TerraMystica.Repo,
+  username: "YOUR_POSTGRES_USERNAME", 
+  password: "YOUR_PASSWORD",
+  hostname: "localhost",
+  database: "terra_mystica_dev",
+  ...
 ```
+
+- run `mix ecto.create` to have the database created
 
 ## Start up
 
