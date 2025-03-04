@@ -12,6 +12,7 @@ database the user has to do the following:
 DB_USERNAME - postgres database user username
 DB_PASSWORD - postgres database user's password
 DB_HOSTNAME - postgres database hostname (default: localhost)
+DB_DATABASE_NAME - postgres database name - has to be created (TODO: add description after adding schema)
 ```
 
 ## Start up
