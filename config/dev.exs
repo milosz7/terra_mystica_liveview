@@ -8,6 +8,17 @@ import Config
 # to bundle .js and .css sources.
 # Binding to loopback ipv4 address prevents access from other machines.
 
+# Database dev config
+
+config :terra_mystica, TerraMystica.Repo,
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  database: "terra_mystica_dev",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 config :terra_mystica, TerraMysticaWeb.Endpoint,
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],

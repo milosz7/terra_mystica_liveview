@@ -1,5 +1,4 @@
 import Config
-import Dotenvy
 
 # config/runtime.exs is executed for all environments, including
 # during releases. It is executed after compilation and before the
@@ -17,24 +16,6 @@ import Dotenvy
 #
 # Alternatively, you can use `mix phx.gen.release` to generate a `bin/server`
 # script that automatically sets the env var above.
-env_dir_prefix = Path.expand("./envs")
-
-source!([
-  Path.absname(".#{config_env()}.env", env_dir_prefix)
-])
-
-# Database dev config
-if config_env() == :dev do
-  config :terra_mystica, TerraMystica.Repo,
-    username: env!("DB_USERNAME"),
-    password: env!("DB_PASSWORD"),
-    hostname: env!("DB_HOSTNAME", :string!, "localhost"),
-    database: env!("DB_DATABASE_NAME"),
-    stacktrace: true,
-    show_sensitive_data_on_connection_error: true,
-    pool_size: 10
-end
-
 if System.get_env("PHX_SERVER") do
   config :terra_mystica, TerraMysticaWeb.Endpoint, server: true
 end
