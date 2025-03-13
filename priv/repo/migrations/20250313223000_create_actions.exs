@@ -4,7 +4,6 @@ defmodule TerraMystica.Repo.Migrations.CreateActions do
   def change do
     create table(:actions) do
       add :action_name, :string
-      add :action_payload, :map, default: %{}
 
       timestamps(type: :utc_datetime)
     end

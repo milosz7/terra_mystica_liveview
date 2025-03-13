@@ -11,7 +11,7 @@ defmodule TerraMystica.Action do
   @doc false
   def changeset(action, attrs) do
     action
-    |> cast(attrs, [:action_name])
-    |> validate_required([:action_name])
+    |> cast(attrs, [:action_name, :action_payload])
+    |> validate_required([:action_name, :action_payload])
   end
 end
