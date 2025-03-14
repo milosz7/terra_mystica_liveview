@@ -37,3 +37,6 @@ npm-debug.log
 
 # Project environment variables 
 /envs/
+
+# macOS directory metadata
+**/.DS_Store
