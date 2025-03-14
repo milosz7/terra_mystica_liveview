@@ -1,4 +1,4 @@
-defmodule TerraMystica.RoundBonus do
+defmodule TerraMystica.Schemas.RoundBonus do
   use Ecto.Schema
   import Ecto.Changeset
 

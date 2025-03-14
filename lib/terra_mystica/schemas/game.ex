@@ -1,4 +1,4 @@
-defmodule TerraMystica.Game do
+defmodule TerraMystica.Schemas.Game do
   use Ecto.Schema
   import Ecto.Changeset
 

@@ -1,4 +1,4 @@
-defmodule TerraMystica.Action do
+defmodule TerraMystica.Schemas.Action do
   use Ecto.Schema
   import Ecto.Changeset
 

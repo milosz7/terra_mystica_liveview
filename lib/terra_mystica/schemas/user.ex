@@ -1,4 +1,4 @@
-defmodule TerraMystica.User do
+defmodule TerraMystica.Schemas.User do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -16,5 +16,6 @@ defmodule TerraMystica.User do
     user
     |> cast(attrs, [:username, :password_hash, :email, :is_ai])
     |> validate_required([:username, :password_hash, :email, :is_ai])
+    |> validate_format(:email, ~r/@/)
   end
 end

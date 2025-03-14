@@ -1,4 +1,4 @@
-defmodule TerraMystica.PassTile do
+defmodule TerraMystica.Schemas.PassTile do
   use Ecto.Schema
   import Ecto.Changeset
 

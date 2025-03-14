@@ -1,9 +1,8 @@
-defmodule TerraMystica.GamePassTile do
+defmodule TerraMystica.Schemas.GamePassTile do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "game_pass_tiles" do
-
     field :pass_tile_id, :id
     field :game_id, :id
 

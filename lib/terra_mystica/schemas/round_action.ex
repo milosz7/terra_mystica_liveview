@@ -1,4 +1,4 @@
-defmodule TerraMystica.RoundAction do
+defmodule TerraMystica.Schemas.RoundAction do
   use Ecto.Schema
   import Ecto.Changeset
 
